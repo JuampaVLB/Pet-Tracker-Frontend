@@ -59,7 +59,7 @@ const Login = () => {
   const handleSubmit = () => {
     axios({
       method: "post",
-      url: "http://10.0.2.2:4000/api/v1/auth/signin",
+      url: "https://pet-tracker-backend-production.up.railway.app/api/v1/auth/signin",
       data: {
         username,
         password,
@@ -81,7 +81,7 @@ const Login = () => {
 
   return (
     <ImageBackground
-      source={require("../assets/register_fondo.png")}
+      source={require("../assets/register_fondo.jpeg")}
       style={styles.image}
     >
       <View style={styles.form}>
