@@ -75,7 +75,7 @@ const Login = () => {
         Alert.alert(token);
       })
       .catch(function (error) {
-        console.log(error.response.data.message);
+        Alert.alert(error.response.data[0].message);
       });
   };
 

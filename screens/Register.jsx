@@ -25,19 +25,15 @@ const Register = () => {
       },
     })
       .then(function (response) {
-
       //  let token = response.headers.get("auth-token");
-
         Alert.alert(
           `Register Exitoso! ${response.data.user.username} - ${response.data.user.email}`
         );
-
       })
       .catch(function (error) {
-        console.log(error);
+        Alert.alert(error.response.data[0].message);
       });
   };
-
   return (
     <ImageBackground
       source={require("../assets/register_fondo.jpeg")}
