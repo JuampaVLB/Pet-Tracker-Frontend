@@ -75,7 +75,11 @@ const Login = () => {
         Alert.alert(token);
       })
       .catch(function (error) {
-        Alert.alert(error.response.data[0].message);
+         if (error.response.data.length >= 1) {
+          Alert.alert(error.response.data[0].message); 
+        } else {
+          Alert.alert(error.response.data.message);
+        }
       });
   };
 
